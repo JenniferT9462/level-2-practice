@@ -30,6 +30,7 @@ use it all course. Each week, a new folder shows up here.
 | Week | Theme | Days |
 | --- | --- | --- |
 | [Week 3](week-3/) | JavaScript: My Food Truck | [Day 1](week-3/day-1/) · [Day 2](week-3/day-2/) · [Day 4](week-3/day-4/) |
+| [Week 4](week-4/) | Bootstrap + JavaScript warm-ups | [Day 1](week-4/day-1/) · [Day 2](week-4/day-2/) · [Day 4](week-4/day-4/) |
 
 ## Save your work (the 3 save-point commands)
 
