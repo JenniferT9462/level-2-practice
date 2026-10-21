@@ -4,8 +4,8 @@ body {
   margin: 40px auto;
   padding: 0 16px;
   line-height: 1.5;
-  background: #fffcf9;
-  color: #222;
+  background: #282a92;
+  color: #f4f7f9;
 }
 
 h1 {
@@ -16,12 +16,26 @@ h1 {
   background: #eef4fa;
   border-left: 4px solid #4e89bd;
   padding: 8px 12px;
+  color: #282a92;
+}
+
+a {
+ text-decoration: none; 
+ color: whitesmoke;
+}
+
+a:hover {
+  font-size: 24px;
+  border: solid white 2px;
+  padding: 4px;
+  transition: transform 0.3s ease-out;
 }
 
 code {
   background: #f0f0f0;
   padding: 1px 4px;
   border-radius: 3px;
+  color: #282a92;
 }
 
 pre {
