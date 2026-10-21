@@ -1,17 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 2 — Truck Methods and JSON</title>
-  <link rel="stylesheet" href="../../style.css">
-</head>
-<body>
-  <h1>Day 2 — Truck Methods and JSON</h1>
-  <p class="tip">Your work shows up in the <strong>console</strong>, not on this page.
-    Right-click → <strong>Inspect</strong> → <strong>Console</strong>.</p>
-  <p><a href="../../index.html">← All practice days</a></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 2 — Truck Methods and JSON</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <h1>Day 2 — Truck Methods and JSON</h1>
+    <p class="tip">
+      Your work shows up in the <strong>console</strong>, not on this page.
+      Right-click → <strong>Inspect</strong> → <strong>Console</strong>.
+    </p>
+    <p><a href="../../index.html">← All practice days</a></p>
 
-  <script src="script.js"></script>
-</body>
+    <dl>
+      <dt>Methods</dt>
+      <dd>
+        A function stored inside an object. You call it with a dot:
+        <code>truck.describe()</code>.
+      </dd>
+
+      <dt><code>this</code></dt>
+      <dd>
+        Inside a method, <code>this</code> means "the object I belong to," so
+        <code>this.name</code> reads the truck's own name.
+        <strong>Watch out:</strong> arrow functions (<code>() =&gt; {}</code>)
+        don't get their own <code>this</code>, so use a regular
+        <code>function</code> for methods.
+        <pre><code>const truck = {
+  name: "Taco Rocket",
+  describe: function () {
+    return "Welcome to " + this.name + "!";
+  },
+};</code></pre>
+      </dd>
+
+      <dt>JSON</dt>
+      <dd>
+        Text that looks like an object. Apps use it to save and send data.
+        <code>JSON.parse(text)</code> turns JSON text into a real object.
+        <code>JSON.stringify(object)</code> turns an object back into text.
+        <pre><code>const text = '{"name": "taco", "price": 4.5}';
+const item = JSON.parse(text);   // object
+JSON.stringify(item);            // string again</code></pre>
+      </dd>
+    </dl>
+
+    <script src="script.js"></script>
+  </body>
 </html>

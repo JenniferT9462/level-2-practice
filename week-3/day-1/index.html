@@ -1,17 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 1 — My Food Truck</title>
-  <link rel="stylesheet" href="../../style.css">
-</head>
-<body>
-  <h1>Day 1 — My Food Truck</h1>
-  <p class="tip">Your work shows up in the <strong>console</strong>, not on this page.
-    Right-click → <strong>Inspect</strong> → <strong>Console</strong>.</p>
-  <p><a href="../../index.html">← All practice days</a></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 1 — My Food Truck</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <h1>Day 1 — My Food Truck</h1>
+    <p class="tip">
+      Your work shows up in the <strong>console</strong>, not on this page.
+      Right-click → <strong>Inspect</strong> → <strong>Console</strong>.
+    </p>
+    <p><a href="../../index.html">← All practice days</a></p>
 
-  <script src="script.js"></script>
-</body>
+    <dl>
+      <dt>Variables</dt>
+      <dd>
+        A named box that holds a value. Use <code>const</code> when the value
+        won't change and <code>let</code> when it will. Values have types: a
+        <strong>string</strong> (text), a <strong>number</strong>, or a
+        <strong>boolean</strong> (<code>true</code>/<code>false</code>).
+        <code>typeof</code> tells you which one you have.
+        <pre><code>const truckName = "Taco Rocket";
+let yearsOpen = 3;</code></pre>
+      </dd>
+
+      <dt>Arrays</dt>
+      <dd>
+        An ordered list inside square brackets. Counting starts at
+        <strong>0</strong>, so the first item is <code>[0]</code>.
+        <code>.length</code> tells you how many items there are.
+        <pre><code>const menu = ["taco", "burrito", "nachos"];
+menu[0];      // "taco"
+menu.length;  // 3</code></pre>
+      </dd>
+
+      <dt>Objects</dt>
+      <dd>
+        One thing with named details, called <strong>properties</strong>, inside
+        curly braces. Read a property with dot notation (<code>item.name</code>)
+        or bracket notation (<code>item["name"]</code>).
+        <pre><code>const item = { name: "taco", price: 4.5, spicy: true };</code></pre>
+      </dd>
+
+      <dt>Functions</dt>
+      <dd>
+        A reusable recipe. You give it inputs (<strong>parameters</strong>), and
+        it <code>return</code>s an answer. Nothing happens until you
+        <strong>call</strong> it.
+        <pre><code>function addTip(price, tip) {
+  return price + tip;
+}
+addTip(10, 2);  // 12</code></pre>
+      </dd>
+    </dl>
+
+    <script src="script.js"></script>
+  </body>
 </html>

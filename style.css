@@ -23,3 +23,23 @@ code {
   padding: 1px 4px;
   border-radius: 3px;
 }
+
+pre {
+  background: #f0f0f0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+dd {
+  margin-left: 16px;
+}

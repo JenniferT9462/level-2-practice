@@ -1,19 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 4 — Menu Loops</title>
-  <link rel="stylesheet" href="../../style.css">
-</head>
-<body>
-  <h1>Day 4 — Menu Loops</h1>
-  <p class="tip">Steps 1–2 show up in the <strong>console</strong>. Step 3 shows up on this page.</p>
-  <p><a href="../../index.html">← All practice days</a></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 4 — Menu Loops</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <h1>Day 4 — Menu Loops</h1>
+    <p class="tip">
+      Steps 1–2 show up in the <strong>console</strong>. Step 3 shows up on this
+      page.
+    </p>
+    <p><a href="../../index.html">← All practice days</a></p>
+    <dl>
+      <dt><code>for</code> loop</dt>
+      <dd>
+        Repeats code a set number of times. It has three parts: a start (<code
+          >let i = 0</code
+        >), a condition to keep going (<code>i &lt; menu.length</code>), and a
+        step (<code>i++</code>). Use <code>menu[i]</code> to get the current
+        item.
+        <pre><code>for (let i = 0; i &lt; menu.length; i++) {
+  console.log(menu[i].name);
+}</code></pre>
+      </dd>
 
-  <h2>Menu</h2>
-  <ul id="menu-list"></ul>
+      <dt><code>forEach</code></dt>
+      <dd>
+        A shorter way to loop over an array. It hands your function each item,
+        one at a time, so you don't need <code>i</code>.
+        <pre><code>menu.forEach(function (item) {
+  console.log(item.name);
+});</code></pre>
+      </dd>
 
-  <script src="script.js"></script>
-</body>
+      <dt>Adding up with a loop</dt>
+      <dd>
+        Start a variable at <code>0</code> before the loop, then add to it on
+        each pass: <code>total = total + item.price;</code>
+      </dd>
+    </dl>
+
+
+    <hr>
+    <h2>Menu</h2>
+    <ul id="menu-list"></ul>
+
+    <script src="script.js"></script>
+  </body>
 </html>
