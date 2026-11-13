@@ -1,30 +1,20 @@
-// TODO: Variables
-let truckName = "Bayou Boudin & Bites";
-let itemsSoldToday = 45;
-let isTruckOpen = true;
-
-console.log(truckName, typeof truckName);
-console.log(itemsSoldToday, typeof itemsSoldToday);
-console.log(isTruckOpen, typeof isTruckOpen);
-// TODO: An array
-let menuItems = ["Crawfish Étouffée", "Shrimp & Grits", "Chicken & Sausage Gumbo", "Pralines"];
-
-console.log("First item:", menuItems[0]);
-console.log("Last item:", menuItems[menuItems.length - 1]);
-console.log("Total items:", menuItems.length);
-// TODO: An object
-let featuredDish = {
-  name: "Spicy Seafood Gumbo",
-  price: 14.50,
-  spicy: true
+// TODO: Step 1 - Make an object for your truck with a name and a describe() method
+const myTruck = {
+  name: "Bayou Boudin & Bites",
+  describe: function () {
+    return `${this.name} serves up authentic Creole and Cajun favorites hot off the grill!`;
+  }
 };
 
-console.log("Dish Name (dot notation):", featuredDish.name);
-console.log("Dish Price (bracket notation):", featuredDish["price"]);
-// TODO: A function
-function orderTotal(price, quantity) {
-  return price * quantity;
-}
+console.log(myTruck.describe());
+// TODO: Step 3 - Write a JSON string, parse it, and log one property
+const menuItemJSON = '{"name": "Crawfish Étouffée", "price": 15.50, "spicy": true}';
+console.log("Original JSON text:", menuItemJSON);
 
-// My guess for orderTotal(4.5, 3) is 13.5
-console.log("Order Total Result:", orderTotal(4.5, 3));
+const parsedItem = JSON.parse(menuItemJSON);
+console.log("Parsed JS Object:", parsedItem);
+console.log("Item Price:", parsedItem.price);
+// TODO: Step 4 - Stringify it back and check typeof
+const backToJSON = JSON.stringify(parsedItem);
+console.log("Stringified back:", backToJSON);
+console.log("Type after stringify:", typeof backToJSON); // Should log: string
